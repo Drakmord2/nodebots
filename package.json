@@ -1,0 +1,15 @@
+{
+  "name": "nodebots",
+  "description": "JavaScript Robotics",
+  "version": "0.4.0",
+  "dependencies": {
+    "johnny-five": "0.13.0",
+    "express": "4.16.2",
+    "morgan": "1.9.0",
+    "body-parser": "1.18.2",
+    "assert": "1.4.1"
+  },
+  "license": "GPL-3.0",
+  "author": "Rubens Carneiro",
+  "repository": "github:Drakmord2/nodebots"
+}

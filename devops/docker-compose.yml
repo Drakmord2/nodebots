@@ -1,0 +1,20 @@
+
+version: '3'
+
+services:
+
+    nodebot:
+        build: ../
+        volumes:
+            - ../:/var/www/node
+        ports:
+            - 6000:6000
+#   Uncomment if running Docker on Linux
+#        devices:
+#            - /dev/ttyUSB0:/dev/ttyUSB0
+        networks:
+            - nodebot-net
+
+networks:
+    nodebot-net:
+        driver: bridge
