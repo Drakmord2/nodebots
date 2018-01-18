@@ -7,7 +7,8 @@ https://nodebots.io
 ## Projects
 
 **Nodebot Workshop**
-- blink-blink (led control)
+- blink-blink   (LED control)
+- servo-wave    (Servo control)  
 
 ## Docker
 A Docker development environment with Node.js and all necessary Node modules is available.
