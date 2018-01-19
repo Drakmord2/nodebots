@@ -7,9 +7,16 @@ https://nodebots.io
 ## Projects
 
 **Nodebot Workshop**
+
+Nodebot workshop from [nodeschool](https://nodeschool.io/)
+
 - blink-blink   (LED control)
 - servo-wave    (Servo control)  
 
+**Servo Server**
+
+Express REST API that controls a servo connected to an Arduino Uno.
+ 
 ## Docker
 A Docker development environment with Node.js and all necessary Node modules is available.
 

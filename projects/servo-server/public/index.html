@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='./stylesheets/style.css' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <title>Servo-Server</title>
+</head>
+<body>
+    <h1>Servo-Server</h1>
+
+    <br>
+    <h3>Control a servo directly from your browser!</h3>
+    <br>
+
+    <div class="form-group">
+        <div class="well well-sm">
+            <label>Degrees:  </label>
+            <input title="degrees" class="form-control" type="range" min="0" max="180" step="5" id="servo-input">
+        </div>
+
+        <br>
+        <div class="wrapper">
+            <button id="btn" class="btn btn-success btn-lg" onclick="sendRequest()">Move Servo</button>
+        </div>
+    </div>
+
+    <br>
+    <div class="well well-lg">
+        <div id="result"></div>
+    </div>
+
+    <div class="wrapper">
+        <footer><a href="https://github.com/Drakmord2/nodebots">https://github.com/Drakmord2/nodebots</a></footer>
+    </div>
+
+    <script src="javascript/index.js"></script>
+</body>
+</html>
