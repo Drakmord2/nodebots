@@ -1,6 +1,5 @@
 
 const xhr   = new XMLHttpRequest();
-const btn   = document.getElementById('btn');
 const input = document.getElementById('servo-input');
 
 function sendRequest() {
