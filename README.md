@@ -10,8 +10,10 @@ https://nodebots.io
 
 Nodebot workshop from [nodeschool](https://nodeschool.io/)
 
-- blink-blink   (LED control)
-- servo-wave    (Servo control)  
+- blink-blink   (LEDs)
+- servo-wave    (Servo Motors)  
+- spin-motor-spin (DC Motors)
+- light-switch (Buttons)
 
 **Servo Server**
 
