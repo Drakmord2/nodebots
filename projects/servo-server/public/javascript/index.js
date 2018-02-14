@@ -12,7 +12,8 @@ function sendRequest() {
     const data = { servoPos: input.value };
     const json = JSON.stringify(data);
 
-    xhr.open('POST', 'http://192.168.1.2:9090/servo', true);
+    const serverIP = '192.168.1.5';
+    xhr.open('POST', `http://${serverIP}:9090/servo`, true);
 
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(json);
