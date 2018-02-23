@@ -1,13 +1,21 @@
 
 const xhr = new XMLHttpRequest();
 
-function sendRequest(json) {
-    xhr.onreadystatechange = function() {
-        if (this.readyState === 4) {
-            document.getElementById("result").innerHTML = xhr.responseText;
-        }
-    };
+const labels = document.getElementsByTagName('label');
+for(let i = 0; i < labels.length; i++) {
+    labels[i].addEventListener('click', () => {
+        const input = labels[i].firstElementChild;
 
+        if (input.checked) {
+            labels[i].className = "btn btn-primary active";
+            return;
+        }
+
+        labels[i].className = "btn btn-primary";
+    });
+}
+
+function sendRequest(json) {
     const serverIP = '192.168.1.5';
     xhr.open('POST', `http://${serverIP}:9090/matrix`, true);
 
@@ -29,6 +37,11 @@ function clean() {
 
     for(let i = 0; i < inputs.length; i++) {
         inputs[i].checked = false;
+    }
+
+    const labels = document.getElementsByTagName('label');
+    for(let i = 0; i < labels.length; i++) {
+        labels[i].className =  "btn btn-primary";
     }
 
     const data = createMatrix(inputs);

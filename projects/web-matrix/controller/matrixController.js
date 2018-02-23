@@ -12,7 +12,7 @@ function start (board, image) {
         devices: 1
     });
 
-    board.wait(1000, () => {
+    board.wait(250, () => {
         matrix.draw(image);
     });
 }

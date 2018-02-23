@@ -3,105 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link href='./stylesheets/style.css' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href='./stylesheets/style.css' rel='stylesheet' type='text/css'>
 
     <title>Web-Matrix</title>
 </head>
 <body>
-    <h1>Web-Matrix</h1>
-
+    <h2>Web-LED</h2>
     <br>
-    <h3>Control a LED matrix directly from your browser!</h3>
-    <br>
-
+    
     <div class="form-group">
         <div id="matrix" class="wrapper">
-            <div id="row-1" class="checkbox">
-                <label><input id="m11" type="checkbox" value=""></label>
-                <label><input id="m12" type="checkbox" value=""></label>
-                <label><input id="m13" type="checkbox" value=""></label>
-                <label><input id="m14" type="checkbox" value=""></label>
-                <label><input id="m15" type="checkbox" value=""></label>
-                <label><input id="m16" type="checkbox" value=""></label>
-                <label><input id="m17" type="checkbox" value=""></label>
-                <label><input id="m18" type="checkbox" value=""></label>
+            <div id="row-1" class="btn-group" data-toggle="buttons">
+                <label id="q1" class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label id="q2" class="btn btn-primary"><input type="checkbox" value=""></label>
             </div>
-            <div id="row-2" class="checkbox">
-                <label><input id="m21" type="checkbox" value=""></label>
-                <label><input id="m22" type="checkbox" value=""></label>
-                <label><input id="m23" type="checkbox" value=""></label>
-                <label><input id="m24" type="checkbox" value=""></label>
-                <label><input id="m25" type="checkbox" value=""></label>
-                <label><input id="m26" type="checkbox" value=""></label>
-                <label><input id="m27" type="checkbox" value=""></label>
-                <label><input id="m28" type="checkbox" value=""></label>
+            <br>
+            <div id="row-2" class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
             </div>
-            <div id="row-3" class="checkbox">
-                <label><input id="m31" type="checkbox" value=""></label>
-                <label><input id="m32" type="checkbox" value=""></label>
-                <label><input id="m33" type="checkbox" value=""></label>
-                <label><input id="m34" type="checkbox" value=""></label>
-                <label><input id="m35" type="checkbox" value=""></label>
-                <label><input id="m36" type="checkbox" value=""></label>
-                <label><input id="m37" type="checkbox" value=""></label>
-                <label><input id="m38" type="checkbox" value=""></label>
+            <br>
+            <div id="row-3" class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
             </div>
-            <div id="row-4" class="checkbox">
-                <label><input id="m41" type="checkbox" value=""></label>
-                <label><input id="m42" type="checkbox" value=""></label>
-                <label><input id="m43" type="checkbox" value=""></label>
-                <label><input id="m44" type="checkbox" value=""></label>
-                <label><input id="m45" type="checkbox" value=""></label>
-                <label><input id="m46" type="checkbox" value=""></label>
-                <label><input id="m47" type="checkbox" value=""></label>
-                <label><input id="m48" type="checkbox" value=""></label>
+            <br>
+            <div id="row-4" class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
             </div>
-            <div id="row-5" class="checkbox">
-                <label><input id="m51" type="checkbox" value=""></label>
-                <label><input id="m52" type="checkbox" value=""></label>
-                <label><input id="m53" type="checkbox" value=""></label>
-                <label><input id="m54" type="checkbox" value=""></label>
-                <label><input id="m55" type="checkbox" value=""></label>
-                <label><input id="m56" type="checkbox" value=""></label>
-                <label><input id="m57" type="checkbox" value=""></label>
-                <label><input id="m58" type="checkbox" value=""></label>
+            <br>
+            <div id="row-5" class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
             </div>
-            <div id="row-6" class="checkbox">
-                <label><input id="m61" type="checkbox" value=""></label>
-                <label><input id="m62" type="checkbox" value=""></label>
-                <label><input id="m63" type="checkbox" value=""></label>
-                <label><input id="m64" type="checkbox" value=""></label>
-                <label><input id="m65" type="checkbox" value=""></label>
-                <label><input id="m66" type="checkbox" value=""></label>
-                <label><input id="m67" type="checkbox" value=""></label>
-                <label><input id="m68" type="checkbox" value=""></label>
+            <br>
+            <div id="row-6" class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
             </div>
-            <div id="row-7" class="checkbox">
-                <label><input id="m71" type="checkbox" value=""></label>
-                <label><input id="m72" type="checkbox" value=""></label>
-                <label><input id="m73" type="checkbox" value=""></label>
-                <label><input id="m74" type="checkbox" value=""></label>
-                <label><input id="m75" type="checkbox" value=""></label>
-                <label><input id="m76" type="checkbox" value=""></label>
-                <label><input id="m77" type="checkbox" value=""></label>
-                <label><input id="m78" type="checkbox" value=""></label>
+            <br>
+            <div id="row-7" class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
             </div>
-            <div id="row-8" class="checkbox">
-                <label><input id="m81" type="checkbox" value=""></label>
-                <label><input id="m82" type="checkbox" value=""></label>
-                <label><input id="m83" type="checkbox" value=""></label>
-                <label><input id="m84" type="checkbox" value=""></label>
-                <label><input id="m85" type="checkbox" value=""></label>
-                <label><input id="m86" type="checkbox" value=""></label>
-                <label><input id="m87" type="checkbox" value=""></label>
-                <label><input id="m88" type="checkbox" value=""></label>
+            <br>
+            <div id="row-8" class="btn-group" data-toggle="buttons">
+                <label id="q3" class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label class="btn btn-primary"><input type="checkbox" value=""></label>
+                <label id="q4" class="btn btn-primary"><input type="checkbox" value=""></label>
             </div>
+            <br>
         </div>
+
         <br>
         <br>
-        <br>
+
         <div class="wrapper">
             <button id="btn1" class="btn btn-success btn-lg" onclick="draw()">Draw Matrix</button>
             <button id="btn2" class="btn btn-success btn-lg" onclick="clean()">Clear</button>
@@ -109,12 +116,10 @@
     </div>
 
     <br>
-    <div class="well well-lg">
-        <div id="result"></div>
-    </div>
-
-    <div class="wrapper">
-        <footer><a href="https://github.com/Drakmord2/nodebots">https://github.com/Drakmord2/nodebots</a></footer>
+    <div class="well well-sm">
+        <div class="wrapper">
+            <footer><a href="https://github.com/Drakmord2/nodebots">https://github.com/Drakmord2/nodebots</a></footer>
+        </div>
     </div>
 
     <script src="javascript/index.js"></script>

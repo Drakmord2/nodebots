@@ -5,6 +5,36 @@ body {
     padding: 5%;
 }
 
+h2 {
+    text-align: center;
+}
+
 .wrapper {
     text-align: center;
+}
+
+.btn-group {
+    text-align: center;
+}
+
+.btn-primary {
+    border-radius: 0;
+    width: 35px;
+    height: 35px;
+}
+
+#q1 {
+    border-top-left-radius: 5px;
+}
+
+#q2 {
+    border-top-right-radius: 5px;
+}
+
+#q3 {
+    border-bottom-left-radius: 5px;
+}
+
+#q4 {
+    border-bottom-right-radius: 5px;
 }
