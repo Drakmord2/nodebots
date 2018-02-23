@@ -1,0 +1,60 @@
+
+const xhr = new XMLHttpRequest();
+
+function sendRequest(json) {
+    xhr.onreadystatechange = function() {
+        if (this.readyState === 4) {
+            document.getElementById("result").innerHTML = xhr.responseText;
+        }
+    };
+
+    const serverIP = '192.168.1.5';
+    xhr.open('POST', `http://${serverIP}:9090/matrix`, true);
+
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(json);
+}
+
+function draw() {
+    const inputs = document.getElementsByTagName('input');
+
+    const data = createMatrix(inputs);
+    const json = JSON.stringify(data);
+
+    sendRequest(json);
+}
+
+function clean() {
+    const inputs = document.getElementsByTagName('input');
+
+    for(let i = 0; i < inputs.length; i++) {
+        inputs[i].checked = false;
+    }
+
+    const data = createMatrix(inputs);
+    const json = JSON.stringify(data);
+
+    sendRequest(json);
+}
+
+function createMatrix(inputs) {
+    let matrix  = [];
+    let rowData = [];
+
+    for(let i = 0; i < inputs.length; i++) {
+        if (rowData.length === 8) {
+            matrix.push(rowData.join(''));
+            rowData = [];
+        }
+
+        if (inputs[i].checked) {
+            rowData.push(1);
+            continue;
+        }
+
+        rowData.push(0);
+    }
+    matrix.push(rowData.join(''));
+
+    return { matrix: matrix };
+}
