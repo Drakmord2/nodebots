@@ -1,6 +1,6 @@
 
 const j5Board   = require('johnny-five');
-let   ready     = false;
+let ready       = false;
 
 class Board {
 
@@ -32,6 +32,15 @@ class Board {
 
     onReady () {
         ready = true;
+
+        this.matrix = new j5Board.Led.Matrix({
+            pins: {
+                data:   8,
+                cs:     9,
+                clock:  10
+            },
+            devices: 1
+        });
     }
 
     isReady () {

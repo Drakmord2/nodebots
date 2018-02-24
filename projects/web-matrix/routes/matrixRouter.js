@@ -28,6 +28,21 @@ matrixRouter.route('/')
         res.end();
     });
 
+matrixRouter.route('/point')
+    .all((req, res, next) => {
+        cors(res);
+
+        next();
+    })
+
+    .post((req, res, next) => {
+        matrixCtrl.drawPoint(req, res);
+    })
+
+    .options((req, res, next) => {
+        res.end();
+    });
+
 function cors(res) {
     res.statusCode = 200;
     res.setHeader('Content-type', 'text/html');

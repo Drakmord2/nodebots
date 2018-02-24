@@ -1,23 +1,8 @@
 
-const { Led } = require('johnny-five');
-const Board   = require('../model/board');
-
-function start (board, image) {
-    const matrix = new Led.Matrix({
-        pins: {
-            data:   8,
-            cs:     9,
-            clock:  10
-        },
-        devices: 1
-    });
-
-    matrix.draw(image);
-}
+const Board = require('../model/board');
 
 function draw(req, res) {
-
-    const j5board   = Board.getBoard();
+    const j5Board   = Board.getBoard();
     const image     = req.body.matrix;
 
     if (image.length !== 8) {
@@ -26,11 +11,21 @@ function draw(req, res) {
         return;
     }
 
-    start(j5board, image);
+    j5Board.matrix.draw(image);
+
+    res.end(`<h4>Drawing image.</h4>`);
+}
+
+function drawPoint(req, res) {
+    const j5Board   = Board.getBoard();
+    const point     = req.body.point;
+
+    j5Board.matrix.led(0, point.i, point.j, point.state);
 
     res.end(`<h4>Drawing image.</h4>`);
 }
 
 module.exports = {
-    draw
+    draw,
+    drawPoint
 };

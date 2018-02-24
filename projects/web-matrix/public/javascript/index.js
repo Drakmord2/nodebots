@@ -15,25 +15,39 @@ for(let i = 0; i < labels.length; i++) {
     });
 
     labels[i].addEventListener('click', () => {
-        draw();
+        const input = labels[i].firstElementChild;
+
+        draw(input);
     });
 }
 
-function sendRequest(json) {
+function sendRequest(json, path) {
     const serverIP = '192.168.1.5';
-    xhr.open('POST', `http://${serverIP}:9090/matrix`, true);
+    xhr.open('POST', `http://${serverIP}:9090${path}`, true);
 
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(json);
 }
 
-function draw() {
-    const inputs = document.getElementsByTagName('input');
+function draw(input) {
+    const i     = parseInt(input.parentElement.id[1]) - 1;
+    const j     = parseInt(input.parentElement.id[2]) - 1;
+    let state   = 0;
 
-    const data = createMatrix(inputs);
+    if (input.checked) {
+        state = 1;
+    }
+
+    const data = {
+        'point': {
+            'i': i,
+            'j': j,
+            'state': state
+        }
+    };
     const json = JSON.stringify(data);
 
-    sendRequest(json);
+    sendRequest(json, '/matrix/point');
 }
 
 function clean() {
@@ -51,7 +65,7 @@ function clean() {
     const data = createMatrix(inputs);
     const json = JSON.stringify(data);
 
-    sendRequest(json);
+    sendRequest(json, '/matrix');
 }
 
 function createMatrix(inputs) {
