@@ -13,6 +13,10 @@ for(let i = 0; i < labels.length; i++) {
 
         labels[i].className = "btn btn-primary";
     });
+
+    labels[i].addEventListener('click', () => {
+        draw();
+    });
 }
 
 function sendRequest(json) {
