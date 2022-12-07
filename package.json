@@ -5,7 +5,7 @@
   "dependencies": {
     "johnny-five": "0.13.0",
     "nodebot-workshop": "3.2.0",
-    "express": "4.16.2",
+    "express": "4.17.3",
     "morgan": "1.9.1",
     "body-parser": "1.18.2",
     "assert": "1.4.1"
